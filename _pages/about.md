@@ -68,9 +68,9 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
   Bosch (Full-time), 2021–2022  
   AI-based parameter tuning for vehicle application and simulation calibration.
 
-- **Teaching Assistant**  
+- **Teaching**  
 
-  - **Head TA, Monash University (2022–2025)**  
+  - **Head Teaching Assistant, Monash University (2022–2025)**  
     - *FIT5215 Deep Learning*: led practice classes on neural networks (Python/PyTorch/TensorFlow), graded assignments and exams.  
     - *FIT5225 Cloud Computing and Security*: designed and conducted practice classes on cloud computing, graded assignments and exams.  
 

@@ -32,7 +32,7 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
   
 ---
 
-## Selected Papers
+## Selected Publications
 
 ### Agentic Large Language Models for Day-to-Day Route Choices  
 **L Wang**, P Duan, Z He, C Lyu, X Chen, N Zheng, L Yao, Z Ma. (2025), *Transportation Research Part C: Emerging Technologies*  

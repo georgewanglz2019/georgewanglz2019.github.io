@@ -75,7 +75,7 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
     - *FIT5225 Cloud Computing and Security*: designed and conducted practice classes on cloud computing, graded assignments and exams.  
 
   - **Teaching Assistant, KTH Royal Institute of Technology (2024–2025)**  
-    - *AH2178-H22 AI for Transportation*: designed and implemented practice classes on Large Language Models and Reinforcement Learning.  
+    - *AH2179 AI for Transportation*: designed and implemented practice classes on Large Language Models and Reinforcement Learning.  
 
   - **Teaching Assistant, Monash University (2021–2022)**  
     - *ENG5005 Research Project*: supervised adaptive traffic signal control projects using deep reinforcement learning, mentored students on programming and writing.  

@@ -40,7 +40,7 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
 
 ### Scalable and Reliable Multi-agent Reinforcement Learning for Traffic Assignment  
 **L Wang**, P Duan, C Lyu, Z Wang, Z He, N Zheng, Z Ma. (2025), *Communications in Transportation Research*  
-[📄 Paper](https://www.arxiv.org/abs/2506.17029) | [💻 Code](https://github.com/georgewanglz2019/MARL4TA)
+[📄 Paper](https://www.sciencedirect.com/science/article/pii/S2772424725000654) | [💻 Code](https://github.com/georgewanglz2019/MARL4TA)
 
 ### EvolveSignal: A Large Language Model Powered Coding Agent for Discovering Traffic Signal Control Algorithms
 **L Wang**, P Duan, H Wang, Y Wang, J Xu, N Zheng, Z Ma. (2025), *Under Review*  

@@ -97,7 +97,8 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
 
 - [LinkedIn](https://www.linkedin.com/in/leizhen-wang-0766a8250/)  
 - [GitHub](https://github.com/georgewanglz2019?tab=repositories)  
-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=sM-HlFAAAAAJ&view_op=list_works&sortby=pubdate)  
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=sM-HlFAAAAAJ&view_op=list_works&sortby=pubdate)
+- Email: leizhen.wang@monash.edu
 
 ---
 

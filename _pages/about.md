@@ -59,7 +59,7 @@ Currently, I am also a **visiting PhD student** at the **KTH Royal Institute of 
 [📄 Paper](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12300)
 
 
-### For a full and up-to-date list of my publications: [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=sM-HlFAAAAAJ&view_op=list_works&sortby=pubdate).
+### For a full and up-to-date list of my publications: [Google Scholar profile](https://scholar.google.com/citations?user=MdeVgWkAAAAJ&hl=en).
 ---
 
 ## Experience

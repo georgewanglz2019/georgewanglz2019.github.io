@@ -66,6 +66,8 @@ a { color: var(--cyan); }
 .soc:hover { background: var(--cyan); color: var(--bg); }
 .hero-visual { display: block; }
 .hero-visual .avatar {
+  position: relative;
+  z-index: 9999; /* above the global scanline overlay */
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;

@@ -1,196 +1,157 @@
-# Leizhen Wang — Personal Homepage
+# Terminal-Style Personal Homepage Template
 
-个人主页 · Personal homepage: **https://georgewanglz2019.github.io/**
+一套内容、五种风格的个人主页模板。**纯静态、零构建**——不依赖 Jekyll 或任何框架，GitHub Pages 直接发布。
 
-一套内容、多种风格。主页默认为黑客终端（Hacker Terminal）风格，右下角 **Styles** 面板可随时切换；画廊对比页在 [`/lab/`](https://georgewanglz2019.github.io/lab/)。
+One content source, five switchable styles. **Fully static, zero build** — no Jekyll or frameworks; GitHub Pages serves it as-is.
 
-One source of content, multiple switchable styles. The homepage defaults to the Hacker Terminal style; use the floating **Styles** panel (bottom-right) to switch, or compare all styles in the [`/lab/`](https://georgewanglz2019.github.io/lab/) gallery.
+- 在线演示 Live demo: **https://georgewanglz2019.github.io/**
+- 风格画廊 Style gallery: **https://georgewanglz2019.github.io/lab/**
+
+---
+
+## 展示效果 · Showcase
+
+默认主页为**黑客终端风**（多色终端配色、打字机开场、扫描线背景），右下角 **◧ Styles** 面板可随时切换到其余风格，画廊页可一屏对比全部效果：
+
+| 风格 | 特点 |
+|---|---|
+| Hacker Terminal 黑客终端 | 绿/青/琥珀多色命令行美学，打字机特效 |
+| Swiss International 瑞士国际主义 | 黑白红网格排版，Helvetica 大标题 |
+| Chinese Ink Wash 中国水墨 | 宣纸底色、楷体、朱砂印章 |
+| Academic Rigour 学术严谨 | LaTeX 论文式排版、编号文献 |
+| Editorial Magazine 杂志风尚 | 衬线大标题、首字下沉、编辑排版 |
+
+**核心特性**：统一内容源（改一个 JSON 全站同步）· 中英文一键切换 · 风格切换面板 · 求职引导区 · 响应式布局 · 无需任何构建步骤。
 
 ---
 
 # 中文教程
 
-## 一、最重要的原则：内容只有一份
+## 一、用这个模板创建你自己的主页（5 分钟）
 
-**所有文字内容都在 [`lab/content.json`](lab/content.json) 这一个文件里。** 修改它，主页和全部 5 种风格会自动同步更新——不需要改任何 HTML/CSS。
+GitHub 个人主页的规则：**仓库名为 `你的用户名.github.io`，就会自动发布到 `https://你的用户名.github.io/`**。所以目标就是把这个项目的代码放进你自己的同名仓库。三种方式任选：
 
-- `en` 节点：英文内容（默认）
-- `zh` 节点：中文内容（页面右上角 中文/EN 按钮切换）
+### 方式 A：Fork 后改名（保留对原项目的致谢链接，推荐）
 
-改完提交推送，1–2 分钟后线上生效：
+1. 打开本项目页面，点右上角 **Fork**，把仓库 fork 到你自己的账号；
+2. 进入你 fork 的仓库 → **Settings → General → Repository name**，把名字改成 **`你的用户名.github.io`** → Rename；
+3. 等 1–2 分钟，访问 `https://你的用户名.github.io/` 即可看到效果。
 
-```bash
-git add -A
-git commit -m "Update content"
-git push
-```
+### 方式 B：下载 ZIP 上传（最简单，不用 git）
 
-## 二、content.json 字段对照表
+1. 本项目页面 → **Code → Download ZIP**，解压；
+2. 在你的账号新建仓库：右上角 **+ → New repository** → 名字填 **`你的用户名.github.io`** → Public → 创建；
+3. 在新仓库页面点 **uploading an existing file**，把解压出的**全部文件**拖进去 → Commit；
+4. 等 1–2 分钟，访问 `https://你的用户名.github.io/`。
 
-| 字段 | 含义 | 示例 |
-|---|---|---|
-| `siteName` | 导航栏左上角的名字 | `"Leizhen Wang"` |
-| `status` | Hero 顶部状态徽章 | `"Open to Opportunities · 2026"` |
-| `seekingIntro` | 求职引导段落（status 下方） | 一句话说明毕业时间 + 求职意向 |
-| `seekingCta` | 求职区按钮文字 | `"Get in Touch"` |
-| `seekingRoles` | 求职方向关键词（数组） | `["Agentic LLMs", "Reinforcement Learning", ...]` |
-| `heroTitleA` / `heroName` / `heroNameCn` | 大标题前缀 / 姓名 / 括号名 | `"Hi, I'm"` / `"Leizhen Wang"` / `"(王雷震)"` |
-| `heroSub` | 标题下方的研究方向一句话 | `"LLM Agents · Reinforcement Learning · ..."` |
-| `heroBio` | 个人简介段落 | 2–4 句 |
-| `ctaPubs` | 主按钮文字（指向论文区） | `"View Publications"` |
-| `tags` | 研究兴趣标签（数组，宜 5–7 个） | `["Agentic LLMs", ...]` |
-| `skills` | 工程技能关键词（数组） | `["Python", "PyTorch", ...]` |
-| `pubs` | 论文卡片列表（数组） | 见下 |
-| `experience` | 工作经历时间线（数组） | `date` / `role` / `points[]` |
-| `education` | 教育经历（数组） | `school` / `degree` / `year` / `note` |
-| `extras` | 专利、学术服务、语言（3 个小卡片） | `title` / `text` |
-| `contactText` | 底部联系区文字 | — |
-| `email` | 邮箱 | — |
-| `badge1` / `badge2` | 照片下方两张信息卡 | `["Monash University", "PhD · AI · 2022–2026"]` |
-| `social` | 社交链接（数组，[名字, 链接]） | `[["GitHub", "https://..."]]` |
-
-### 论文卡片（`pubs` 数组中的一项）
-
-```json
-{
-  "venue": "TR-C · 2025",          // 期刊/年份标签；review=true 时显示"在审"配色
-  "review": false,
-  "title": "论文标题",
-  "authors": "L Wang, P Duan, ...",
-  "journal": "期刊全名（可留空 \"\"）",
-  "note": "一句话亮点：方法 → 量化结果（可留空）",
-  "tags": ["LLM Agents", "Route Choice"],
-  "links": [["Paper", "https://..."], ["Code", "https://..."]]
-}
-```
-
-新增论文：在 `pubs` 数组里复制一项改写即可（中英文两个语言节点各加一份）。删除则整项移除。
-
-## 三、换照片
-
-照片文件放在 [`images/`](images/) 目录，渲染器统一引用 `/images/Leizhen_Spain.jpg`。想换照片：把新图放进 `images/`，然后全局替换 `lab/render.js` 中的 `img.src = "/images/Leizhen_Spain.jpg"` 一行即可。
-
-## 四、风格管理
-
-当前保留 5 种风格：Hacker Terminal / Swiss International / Chinese Ink Wash / Academic Rigour / Editorial Magazine。
-
-每种风格 = 两个文件 + 两处注册：
-
-- `lab/<风格名>.html`（页面壳，仅十几行）
-- `lab/s/<风格名>.css`（样式）
-
-**删除一个风格**：删掉上述两个文件，并从两处注册表移除对应行——
-1. `lab/render.js` 顶部的 `STYLES` 数组
-2. `lab/index.html`（画廊）里的 `STYLES` 数组
-
-**新增一个风格**：仿照现有壳新建 `lab/xxx.html`（改 `data-style="xxx"` 和 css 引用），新建 `lab/s/xxx.css`，再在两处 `STYLES` 数组各加一行 `["xxx", "English Name", "中文名"]`。
-
-**修改默认主页风格**：根目录 `index.html` 是主页壳，改其中的 `data-style="terminal"` 和对应的 css 引用即可（例如换成 `swiss`）。
-
-## 五、本地预览
-
-无需 Jekyll。在项目根目录起一个静态服务器即可：
+### 方式 C：git 命令行
 
 ```bash
-python -m http.server 8000
-# 打开 http://localhost:8000/index.html（主页）
-# 打开 http://localhost:8000/lab/index.html（画廊）
+git clone https://github.com/georgewanglz2019/georgewanglz2019.github.io.git my-homepage
+cd my-homepage
+rm -rf .git                      # 去掉原仓库历史（Windows 用 rmdir /s /q .git）
+git init && git add -A && git commit -m "My personal homepage"
+# 在你的账号新建名为 你的用户名.github.io 的空仓库后：
+git remote add origin https://github.com/你的用户名/你的用户名.github.io.git
+git push -u origin main          # 若本地分支叫 master 就推 master
 ```
 
-## 六、注意事项
+## 二、必改的 3 个地方
 
-- 本项目是**完全自包含的纯静态站点**——无构建步骤、不依赖 Jekyll，GitHub Pages 直接按原样发布。
-- `.workbuddy/` 已被 gitignore，是本机工作区，不会上传。
-- 页面结构：`index.html`（主页壳，默认终端风格）+ `lab/`（内容源、渲染器、5 种风格、画廊）+ `images/`（照片素材）。
+| 位置 | 改什么 |
+|---|---|
+| **`lab/content.json`** | 全部文字内容：姓名、简介、求职意向、论文、经历、教育、社交链接（`en` 英文 / `zh` 中文两个节点） |
+| **`images/`** | 换成你的照片，并修改 `lab/render.js` 中 `img.src = "/images/Leizhen_Spain.jpg"` 一行的文件名 |
+| **`index.html`** | `<title>` 和 `<meta name="description">` 改成你的信息 |
+
+改完推送，1–2 分钟后线上生效：
+
+```bash
+git add -A && git commit -m "Update my info" && git push
+```
+
+## 三、content.json 常用字段
+
+| 字段 | 含义 |
+|---|---|
+| `siteName` | 导航栏左上角名字 |
+| `status` | Hero 顶部状态徽章（如 "Open to Opportunities · 2026"） |
+| `seekingIntro` / `seekingCta` / `seekingRoles` | 求职引导段落 / 按钮文字 / 方向关键词 |
+| `heroTitleA` / `heroName` / `heroNameCn` | 大标题前缀 / 姓名 / 括号名 |
+| `heroSub` / `heroBio` | 研究方向一句话 / 个人简介 |
+| `tags` / `skills` | 研究兴趣标签（宜 5–7 个）/ 技能关键词 |
+| `pubs` | 论文卡片数组：`venue` `title` `authors` `journal` `note` `tags` `links`（新增论文复制一段改） |
+| `experience` / `education` / `extras` | 经历时间线 / 教育 / 专利服务语言小卡片 |
+| `contactText` / `email` / `social` | 联系区文字 / 邮箱 / 社交链接 `[名字, 网址]` |
+| `badge1` / `badge2` | 照片下方两张信息卡 |
+
+## 四、常用自定义
+
+- **改默认风格**：根目录 `index.html` 中 `data-style="terminal"` 与 `terminal.css` 换成 `swiss / ink / academic / magazine` 之一。
+- **增删风格**：每种风格 = `lab/<名>.html` + `lab/s/<名>.css` 两个文件，并在 `lab/render.js` 和 `lab/index.html` 的 `STYLES` 数组各增删一行。
+- **本地预览**（可选）：项目根目录运行 `python -m http.server 8000`，打开 `http://localhost:8000/index.html`。
+
+## 五、注意事项
+
+- 纯静态：GitHub Pages 按文件原样发布，**没有构建环节**，推送即上线。
+- 照片等静态资源一律放 `images/`，用绝对路径 `/images/xxx` 引用。
+- 遇到问题先看本文件，或到原项目提 Issue。
 
 ---
 
 # English Guide
 
-## 1. The golden rule: one content source
+## 1. Create your own homepage in 5 minutes
 
-**All text lives in a single file: [`lab/content.json`](lab/content.json).** Edit it once and the homepage plus all 5 styles update automatically — no HTML/CSS changes needed.
+GitHub rule: **a repo named `<your-username>.github.io` is auto-published to `https://<your-username>.github.io/`**. So the goal is simply to get this project's files into your own repo with that name. Pick one of three ways:
 
-- `en`: English content (default)
-- `zh`: Chinese content (toggled via the 中文/EN button, top-right)
+### Option A: Fork + rename (keeps a credit link, recommended)
 
-Commit and push; the live site updates in 1–2 minutes:
+1. Click **Fork** (top-right) on this repo;
+2. In your fork: **Settings → General → Repository name** → rename it to **`<your-username>.github.io`**;
+3. Wait 1–2 minutes, then visit `https://<your-username>.github.io/`.
+
+### Option B: Download ZIP + upload (no git)
+
+1. **Code → Download ZIP**, unzip;
+2. Create a new repo named **`<your-username>.github.io`** (Public);
+3. On the repo page click **uploading an existing file**, drag in **all** unzipped files, commit;
+4. Wait 1–2 minutes and visit your site.
+
+### Option C: git CLI
 
 ```bash
-git add -A
-git commit -m "Update content"
-git push
+git clone https://github.com/georgewanglz2019/georgewanglz2019.github.io.git my-homepage
+cd my-homepage
+rm -rf .git                      # drop original history (Windows: rmdir /s /q .git)
+git init && git add -A && git commit -m "My personal homepage"
+# after creating an empty repo named <your-username>.github.io:
+git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
+git push -u origin main          # or "master" if that is your local branch
 ```
 
-## 2. Field reference
+## 2. Three must-edit spots
 
-| Field | Purpose |
+| Where | What |
 |---|---|
-| `siteName` | Name in the top-left nav |
-| `status` | Status badge at the top of the hero |
-| `seekingIntro` | Job-seeking paragraph right under the badge |
-| `seekingCta` | Label of the job-seeking button |
-| `seekingRoles` | Target-role keywords (array) |
-| `heroTitleA` / `heroName` / `heroNameCn` | Heading prefix / name / name in parentheses |
-| `heroSub` | One-line research statement under the heading |
-| `heroBio` | Short bio (2–4 sentences) |
-| `ctaPubs` | Primary button label (scrolls to publications) |
-| `tags` | Research-interest tags (keep 5–7) |
-| `skills` | Engineering-skill keywords |
-| `pubs` | Publication cards (array; see below) |
-| `experience` | Timeline entries: `date` / `role` / `points[]` |
-| `education` | `school` / `degree` / `year` / `note` |
-| `extras` | Three mini cards (patents, service, languages) |
-| `contactText`, `email` | Contact section |
-| `badge1` / `badge2` | Two info cards under the photo |
-| `social` | `[label, url]` pairs |
+| **`lab/content.json`** | All text: name, bio, job-seeking info, publications, experience, education, social links (`en` / `zh` nodes) |
+| **`images/`** | Replace with your photo, then update `img.src = "/images/Leizhen_Spain.jpg"` in `lab/render.js` |
+| **`index.html`** | Update `<title>` and `<meta name="description">` |
 
-### A publication entry
+Then `git add -A && git commit && git push` — live in 1–2 minutes.
 
-```json
-{
-  "venue": "TR-C · 2025",
-  "review": false,
-  "title": "Paper title",
-  "authors": "L Wang, P Duan, ...",
-  "journal": "Full journal name (may be \"\")",
-  "note": "One-line highlight: method → quantified result (may be \"\")",
-  "tags": ["LLM Agents", "Route Choice"],
-  "links": [["Paper", "https://..."], ["Code", "https://..."]]
-}
-```
+## 3. Key content.json fields
 
-To add a paper, copy an entry inside `pubs` (in both `en` and `zh`) and edit it. To remove one, delete the entry.
+`siteName` · `status` · `seekingIntro/seekingCta/seekingRoles` · `heroTitleA/heroName/heroNameCn` · `heroSub/heroBio` · `tags` (5–7) · `skills` · `pubs` (array; copy an entry to add a paper: `venue title authors journal note tags links`) · `experience` · `education` · `extras` · `contactText/email/social` · `badge1/badge2`.
 
-## 3. Changing the photo
+## 4. Common customizations
 
-Put the new image into `images/`, then update the single line `img.src = "/images/Leizhen_Spain.jpg"` in `lab/render.js`.
+- **Default style**: in root `index.html`, change `data-style="terminal"` and the `terminal.css` link to `swiss / ink / academic / magazine`.
+- **Add/remove styles**: one style = `lab/<name>.html` + `lab/s/<name>.css`, plus one line in the `STYLES` arrays of `lab/render.js` and `lab/index.html`.
+- **Local preview** (optional): run `python -m http.server 8000` in the project root, open `http://localhost:8000/index.html`.
 
-## 4. Managing styles
+## 5. Notes
 
-Each style = two files + two registry entries:
-
-- `lab/<style>.html` (a ~15-line shell)
-- `lab/s/<style>.css`
-
-**Delete a style**: remove those two files and its line in both `STYLES` arrays (`lab/render.js` and `lab/index.html`).
-
-**Add a style**: copy an existing shell, set `data-style`, create its CSS, and register it in both arrays.
-
-**Change the default homepage style**: edit `data-style="terminal"` and the CSS link in the root `index.html`.
-
-## 5. Local preview
-
-No Jekyll needed — serve the repo root statically:
-
-```bash
-python -m http.server 8000
-# http://localhost:8000/index.html       (homepage)
-# http://localhost:8000/lab/index.html   (gallery)
-```
-
-## 6. Notes
-
-- Fully self-contained static site — **no build step, no Jekyll**; GitHub Pages serves the files as-is.
-- `.workbuddy/` is git-ignored (local workspace only).
-- Structure: `index.html` (homepage shell, terminal style by default) + `lab/` (content source, renderer, 5 styles, gallery) + `images/` (photos).
+- Fully static: GitHub Pages serves the files as-is — **no build step**; push to publish.
+- Static assets (photos, etc.) go in `images/` and are referenced as `/images/xxx`.
+- Questions? Read this file or open an Issue in the original repo.

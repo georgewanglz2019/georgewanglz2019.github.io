@@ -31,6 +31,13 @@ One content source, five switchable styles. **Fully static, zero build** — no 
 
 GitHub 个人主页的规则：**仓库名为 `你的用户名.github.io`，就会自动发布到 `https://你的用户名.github.io/`**。所以目标就是把这个项目的代码放进你自己的同名仓库。三种方式任选：
 
+> ⚠️ **「你的用户名」指什么？**
+> 指的是你 **GitHub 账号的登录用户名**——不是你的昵称，也不是你想给网站起的名字，更不能随便写。
+> 打开 GitHub 网页右上角头像，"Signed in as xxx" 里的 `xxx` 就是。
+>
+> 举例：本模板作者的 GitHub 用户名是 `georgewanglz2019`，所以仓库名必须是 `georgewanglz2019.github.io`，主页网址就是 `https://georgewanglz2019.github.io/`。
+> 如果你的 GitHub 用户名是 `zhangsan2024`，那么你的仓库就必须叫 `zhangsan2024.github.io`，网址就是 `https://zhangsan2024.github.io/`。**名字对不上，主页就打不开。**
+
 ### 方式 A：Fork 后改名（保留对原项目的致谢链接，推荐）
 
 1. 打开本项目页面，点右上角 **Fork**，把仓库 fork 到你自己的账号；
@@ -104,6 +111,12 @@ git add -A && git commit -m "Update my info" && git push
 ## 1. Create your own homepage in 5 minutes
 
 GitHub rule: **a repo named `<your-username>.github.io` is auto-published to `https://<your-username>.github.io/`**. So the goal is simply to get this project's files into your own repo with that name. Pick one of three ways:
+
+> ⚠️ **What exactly is `<your-username>`?**
+> It is your **GitHub account login name** — not your display name, not a name you invent for the site. Click your avatar (top-right on GitHub): it says "Signed in as xxx" — that `xxx` is your username.
+>
+> Example: this template's author uses the GitHub username `georgewanglz2019`, so the repo must be named `georgewanglz2019.github.io` and the site lives at `https://georgewanglz2019.github.io/`.
+> If your GitHub username is `janesmith42`, your repo must be named `janesmith42.github.io` and your URL will be `https://janesmith42.github.io/`. **If the name doesn't match your username exactly, the site won't work.**
 
 ### Option A: Fork + rename (keeps a credit link, recommended)
 

@@ -1,0 +1,640 @@
+{
+  "en": {
+    "siteName": "Leizhen Wang",
+    "status": "Open to Opportunities · 2026",
+    "heroTitleA": "Hi, I'm",
+    "heroName": "Leizhen Wang",
+    "heroNameCn": "(王雷震)",
+    "heroSub": "LLM Agents · Reinforcement Learning · Automated Algorithm Discovery for smarter urban mobility",
+    "heroBio": "Final-year PhD candidate in AI at Monash University (expected October 2026) and visiting researcher at KTH Royal Institute of Technology (Digital Futures). My research explores how LLM agents and reinforcement learning can automate the discovery and optimization of decision-making algorithms for transportation systems — with first-author work in TR-C, COMMTR and IEEE OJ-ITS, released as the open-source projects LLMTraveler, MARL4TA and EvolveSignal.",
+    "ctaPubs": "View Publications",
+    "ctaContact": "Get in Touch",
+    "stats": [],
+    "kickerInterests": "// Research Interests",
+    "titleInterests": "What I work on",
+    "tags": [
+      "Agentic LLMs",
+      "Self-Evolving Agents",
+      "LLM for Scientific Discovery",
+      "Reinforcement Learning",
+      "Urban Mobility",
+      "Traffic Signal Control"
+    ],
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Gymnasium",
+      "Prompt Engineering",
+      "Agent Harness",
+      "Vibe Coding",
+      "LLM APIs & Tool Use",
+      "Memory & RAG",
+      "SFT",
+      "LoRA / PEFT",
+      "DQN · PPO · MARL",
+      "Bayesian Optimization",
+      "Evolution Strategies",
+      "Multi-Objective Optimization",
+      "Sequential Decision-Making",
+      "Resource Allocation",
+      "SUMO / TraCI",
+      "Linux",
+      "Git"
+    ],
+    "kickerPubs": "// Selected Publications",
+    "titlePubs": "Featured research",
+    "pubsMore": "For a full and up-to-date list of publications, visit my Google Scholar profile",
+    "pubs": [
+      {
+        "venue": "Under Review · 2026",
+        "review": true,
+        "title": "EvolveSignal: A Large Language Model Powered Coding Agent for Discovering Traffic Signal Control Algorithms",
+        "authors": "L Wang, P Duan, H Wang, Y Wang, J Xu, N Zheng, Z Ma",
+        "journal": "",
+        "note": "LLM-driven program synthesis that evolves interpretable signal-control heuristics — 20.1% lower average delay and 47.1% fewer stops than Webster's method.",
+        "tags": [
+          "LLM Coding Agent",
+          "Program Evolution",
+          "Signal Control"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://arxiv.org/abs/2509.03335"
+          ],
+          [
+            "Code",
+            "https://github.com/georgewanglz2019/EvolveSignal"
+          ]
+        ]
+      },
+      {
+        "venue": "TR-C · 2025",
+        "review": false,
+        "title": "Agentic Large Language Models for Day-to-Day Route Choices",
+        "authors": "L Wang, P Duan, Z He, C Lyu, X Chen, N Zheng, L Yao, Z Ma",
+        "journal": "Transportation Research Part C: Emerging Technologies",
+        "note": "LLM decision agents with long-term memory and persona for day-to-day route choice — matching econometric and RL baselines at a fraction of the modeling cost. Fully open source.",
+        "tags": [
+          "LLM Agents",
+          "Memory Retrieval",
+          "Route Choice"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://www.sciencedirect.com/science/article/pii/S0968090X25003110"
+          ],
+          [
+            "Code",
+            "https://github.com/georgewanglz2019/LLMTraveler"
+          ]
+        ]
+      },
+      {
+        "venue": "COMMTR · 2025",
+        "review": false,
+        "title": "Scalable and Reliable Multi-agent Reinforcement Learning for Traffic Assignment",
+        "authors": "L Wang, P Duan, C Lyu, Z Wang, Z He, N Zheng, Z Ma",
+        "journal": "Communications in Transportation Research",
+        "note": "OD-pair router agents with Dirichlet policies reduce agent count by two orders of magnitude and cut the relative gap by 94.99% on Sioux Falls.",
+        "tags": [
+          "MARL",
+          "Traffic Assignment",
+          "Dirichlet Policy"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://www.sciencedirect.com/science/article/pii/S2772424725000654"
+          ],
+          [
+            "Code",
+            "https://github.com/georgewanglz2019/MARL4TA"
+          ]
+        ]
+      },
+      {
+        "venue": "IEEE OJ-ITS · 2026",
+        "review": false,
+        "title": "Reinforcement Learning-based Sequential Route Recommendation for System-Optimal Traffic Assignment",
+        "authors": "L Wang, P Duan, C Lyu, Z Ma",
+        "journal": "IEEE Open Journal of Intelligent Transportation Systems",
+        "note": "MSA-guided deep Q-learning recasts static system optimum as sequential decisions — 0.35% gap to the theoretical optimum on the OW network.",
+        "tags": [
+          "Deep RL",
+          "Route Recommendation",
+          "System Optimum"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://ieeexplore.ieee.org/document/11535462"
+          ]
+        ]
+      },
+      {
+        "venue": "Transportation · 2023",
+        "review": false,
+        "title": "Data-driven Analysis and Modeling of Individual Longitudinal Behavior Response to Fare Incentives in Public Transport",
+        "authors": "L Wang, X Chen, Z Ma, P Zhang, B Mo, P Duan",
+        "journal": "Transportation (Springer)",
+        "note": "",
+        "tags": [
+          "Public Transport",
+          "Fare Incentives",
+          "Behavior Modeling"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://link.springer.com/article/10.1007/s11116-023-10419-8"
+          ]
+        ]
+      },
+      {
+        "venue": "IET ITS · 2022",
+        "review": false,
+        "title": "Human-centric Multimodal Deep (HMD) Traffic Signal Control",
+        "authors": "L Wang, Z Ma, C Dong, H Wang",
+        "journal": "IET Intelligent Transport Systems",
+        "note": "Passenger-weighted human-centric reward with D3QN — up to 19.2% lower per-capita delay than fixed-time control.",
+        "tags": [
+          "Signal Control",
+          "D3QN",
+          "Human-centric"
+        ],
+        "links": [
+          [
+            "Paper",
+            "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12300"
+          ]
+        ]
+      }
+    ],
+    "kickerExp": "// Experience",
+    "titleExp": "Where I've been",
+    "experience": [
+      {
+        "date": "2025 — 2026 · Stockholm",
+        "role": "Machine Learning Engineer (Intern) · Voi Technology",
+        "points": [
+          "Lightweight open-source LLM pipeline for individual mobility prediction (PEFT + prompt design with spatiotemporal context).",
+          "Feedback-driven automated feature-discovery framework — LLM-generated feature functions iteratively refined by prediction performance, ~10% accuracy gain over uniform features."
+        ]
+      },
+      {
+        "date": "2021 — 2022 · Suzhou",
+        "role": "Senior AI Engineer · Bosch",
+        "points": [
+          "Gradient-free black-box optimization (Bayesian optimization, evolution strategies, multi-objective search) for braking-system matching and vehicle simulation calibration."
+        ]
+      },
+      {
+        "date": "2020 · Shanghai",
+        "role": "Big Data Algorithm Engineer (Intern) · Hikvision",
+        "points": [
+          "Interactive SUMO/TraCI simulation and evaluation environment for RL-based adaptive traffic signal control."
+        ]
+      },
+      {
+        "date": "2021 — 2026 · Melbourne / Stockholm",
+        "role": "Teaching & Research Supervision · Monash University & KTH",
+        "points": [
+          "Head TA for Deep Learning and Cloud Computing and Security (Monash); TA for AI for Transportation (KTH) — course design, practice classes, and LLM/RL project supervision.",
+          "Supervised a KTH master's thesis on LLM-guided evolutionary discrete choice modelling (journal submission under review)."
+        ]
+      }
+    ],
+    "kickerEdu": "// Education",
+    "titleEdu": "Academic journey",
+    "education": [
+      {
+        "school": "KTH Royal Institute of Technology",
+        "degree": "Visiting PhD Researcher",
+        "year": "2025 — 2026 · Stockholm",
+        "note": "Digital Futures · LLM coding agents, mobility prediction"
+      },
+      {
+        "school": "Monash University",
+        "degree": "PhD · AI",
+        "year": "2022 — 2026 · Melbourne",
+        "note": "LLM agents, automated algorithm discovery, MARL"
+      },
+      {
+        "school": "Southeast University",
+        "degree": "",
+        "year": "Nanjing, China",
+        "note": ""
+      },
+      {
+        "school": "Shandong Jiaotong University",
+        "degree": "",
+        "year": "Jinan, China",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "title": "Granted Patents",
+        "text": "3 Chinese invention patents on multi-agent and policy-gradient multimodal traffic signal control (co-inventor)."
+      },
+      {
+        "title": "Academic Service",
+        "text": "Reviewer for IEEE T-ITS, Transportation Research Part C/E, IEEE ITSC and IEEE IV."
+      },
+      {
+        "title": "Languages",
+        "text": "Chinese (native), English (fluent)."
+      }
+    ],
+    "kickerContact": "// Contact",
+    "titleContact": "Let's connect",
+    "contactText": "I am open to research positions starting from October 2026. If my work on LLM agents, reinforcement learning, or intelligent mobility looks like a good match for your team, please feel free to reach out.",
+    "email": "leizhen.wang@monash.edu",
+    "footerNote": "Thank you for visiting!",
+    "nav": [
+      [
+        "Research",
+        "#interests"
+      ],
+      [
+        "Publications",
+        "#publications"
+      ],
+      [
+        "Experience",
+        "#experience"
+      ],
+      [
+        "Education",
+        "#education"
+      ],
+      [
+        "Contact",
+        "#contact"
+      ]
+    ],
+    "badge1": [
+      "Monash University",
+      "PhD · AI · 2022–2026"
+    ],
+    "badge2": [
+      "KTH, Stockholm",
+      "Visiting Researcher · 2025–2026"
+    ],
+    "social": [
+      [
+        "Google Scholar",
+        "https://scholar.google.com/citations?user=MdeVgWkAAAAJ&hl=en"
+      ],
+      [
+        "GitHub",
+        "https://github.com/georgewanglz2019"
+      ],
+      [
+        "LinkedIn",
+        "https://www.linkedin.com/in/leizhen-wang-0766a8250/"
+      ],
+      [
+        "ORCID",
+        "https://orcid.org/0000-0001-6523-3057"
+      ],
+      [
+        "ResearchGate",
+        "https://www.researchgate.net/profile/Leizhen-Wang-2"
+      ],
+      [
+        "Email",
+        "mailto:leizhen.wang@monash.edu"
+      ]
+    ],
+    "seekingIntro": "I'm completing my PhD in October 2026 and currently open to new opportunities. If you work on LLM agents, reinforcement learning, or intelligent mobility and feel my background could be a good fit, I'd be glad to hear from you.",
+    "seekingCta": "Get in Touch",
+    "seekingRoles": [
+      "Agentic LLMs",
+      "Reinforcement Learning",
+      "Research Scientist",
+      "Research Engineer"
+    ]
+  },
+  "zh": {
+    "siteName": "王雷震",
+    "status": "正在寻找工作机会 · 2026",
+    "heroTitleA": "你好，我是",
+    "heroName": "王雷震",
+    "heroNameCn": "(Leizhen Wang)",
+    "heroSub": "大模型智能体 · 强化学习 · 自动算法发现，面向更智慧的城市出行",
+    "heroBio": "蒙纳士大学（Monash University）人工智能方向博士候选人（预计 2026 年 10 月毕业），瑞典皇家理工学院（KTH）Digital Futures 访问研究员。我的研究探索如何利用大语言模型智能体与强化学习，自动发现与优化交通系统的决策算法——第一作者成果发表于 TR-C、COMMTR、IEEE OJ-ITS 等期刊，并以 LLMTraveler、MARL4TA、EvolveSignal 三个开源项目发布。",
+    "ctaPubs": "查看论文成果",
+    "ctaContact": "联系我",
+    "stats": [],
+    "kickerInterests": "// 研究方向",
+    "titleInterests": "我的研究领域",
+    "tags": [
+      "智能体式大语言模型（Agentic LLMs）",
+      "自进化智能体",
+      "LLM 驱动的科学发现",
+      "强化学习",
+      "智慧出行",
+      "交通信号控制"
+    ],
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Gymnasium",
+      "Prompt Engineering",
+      "智能体框架（Agent Harness）",
+      "Vibe Coding",
+      "LLM API 与工具调用",
+      "记忆与检索（RAG）",
+      "SFT",
+      "LoRA / PEFT",
+      "DQN · PPO · MARL",
+      "贝叶斯优化",
+      "进化策略",
+      "多目标优化",
+      "序贯决策",
+      "资源分配",
+      "SUMO / TraCI",
+      "Linux",
+      "Git"
+    ],
+    "kickerPubs": "// 代表性论文",
+    "titlePubs": "精选研究成果",
+    "pubsMore": "完整论文列表请访问我的 Google Scholar 主页",
+    "pubs": [
+      {
+        "venue": "在审 · 2026",
+        "review": true,
+        "title": "EvolveSignal：大语言模型驱动的编码智能体，自动发现交通信号控制算法",
+        "authors": "L Wang, P Duan, H Wang, Y Wang, J Xu, N Zheng, Z Ma",
+        "journal": "",
+        "note": "LLM 驱动的程序合成框架，自动进化出可解释的信号控制启发式策略——相较经典 Webster 方法，平均延误降低 20.1%、平均停车次数减少 47.1%。",
+        "tags": [
+          "LLM 编码智能体",
+          "程序进化",
+          "信号控制"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://arxiv.org/abs/2509.03335"
+          ],
+          [
+            "代码",
+            "https://github.com/georgewanglz2019/EvolveSignal"
+          ]
+        ]
+      },
+      {
+        "venue": "TR-C · 2025",
+        "review": false,
+        "title": "面向日复一日路径选择的智能体化大语言模型",
+        "authors": "L Wang, P Duan, Z He, C Lyu, X Chen, N Zheng, L Yao, Z Ma",
+        "journal": "Transportation Research Part C: Emerging Technologies",
+        "note": "结合长期记忆检索与人格特征的 LLM 决策智能体，以远低于传统建模的成本达到与计量模型及 RL 基线相当的表现；完整代码开源。",
+        "tags": [
+          "LLM 智能体",
+          "记忆检索",
+          "路径选择"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://www.sciencedirect.com/science/article/pii/S0968090X25003110"
+          ],
+          [
+            "代码",
+            "https://github.com/georgewanglz2019/LLMTraveler"
+          ]
+        ]
+      },
+      {
+        "venue": "COMMTR · 2025",
+        "review": false,
+        "title": "可扩展、可靠的多智能体强化学习交通分配",
+        "authors": "L Wang, P Duan, C Lyu, Z Wang, Z He, N Zheng, Z Ma",
+        "journal": "Communications in Transportation Research",
+        "note": "以 OD 对路由器重构智能体并采用 Dirichlet 策略，智能体数量减少两个数量级，Sioux Falls 网络上相对间隙降低 94.99%。",
+        "tags": [
+          "多智能体RL",
+          "交通分配",
+          "Dirichlet 策略"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://www.sciencedirect.com/science/article/pii/S2772424725000654"
+          ],
+          [
+            "代码",
+            "https://github.com/georgewanglz2019/MARL4TA"
+          ]
+        ]
+      },
+      {
+        "venue": "IEEE OJ-ITS · 2026",
+        "review": false,
+        "title": "基于强化学习的顺序路径推荐实现系统最优交通分配",
+        "authors": "L Wang, P Duan, C Lyu, Z Ma",
+        "journal": "IEEE Open Journal of Intelligent Transportation Systems",
+        "note": "将 MSA 迭代结构融入深度 Q 学习，OW 网络上与理论系统最优解偏差仅 0.35%。",
+        "tags": [
+          "深度强化学习",
+          "路径推荐",
+          "系统最优"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://ieeexplore.ieee.org/document/11535462"
+          ]
+        ]
+      },
+      {
+        "venue": "Transportation · 2023",
+        "review": false,
+        "title": "数据驱动的公共交通票价激励下个体纵向行为响应分析与建模",
+        "authors": "L Wang, X Chen, Z Ma, P Zhang, B Mo, P Duan",
+        "journal": "Transportation (Springer)",
+        "note": "",
+        "tags": [
+          "公共交通",
+          "票价激励",
+          "行为建模"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://link.springer.com/article/10.1007/s11116-023-10419-8"
+          ]
+        ]
+      },
+      {
+        "venue": "IET ITS · 2022",
+        "review": false,
+        "title": "以人为本的多模态深度交通信号控制（HMD）",
+        "authors": "L Wang, Z Ma, C Dong, H Wang",
+        "journal": "IET Intelligent Transport Systems",
+        "note": "按载客量加权的人本奖励函数与 D3QN 算法，人均等待时间较固定配时最高降低 19.2%。",
+        "tags": [
+          "信号控制",
+          "D3QN",
+          "以人为本"
+        ],
+        "links": [
+          [
+            "论文",
+            "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12300"
+          ]
+        ]
+      }
+    ],
+    "kickerExp": "// 工作与研发经历",
+    "titleExp": "我的职业经历",
+    "experience": [
+      {
+        "date": "2025 — 2026 · 斯德哥尔摩",
+        "role": "大模型算法工程师（实习）· Voi Technology",
+        "points": [
+          "基于轻量开源 LLM 的个体出行预测方案：参数高效微调 + 融合历史轨迹与时空上下文的提示设计。",
+          "设计反馈驱动的个体化特征自动发现框架，由 LLM 生成并迭代筛选特征函数，预测准确率较统一特征方案提升约 10%。"
+        ]
+      },
+      {
+        "date": "2021 — 2022 · 苏州",
+        "role": "高级 AI 工程师 · 博世",
+        "points": [
+          "面向制动系统匹配与车辆仿真标定的无梯度黑盒优化流程（贝叶斯优化、进化策略、多目标优化），减少人工试调。"
+        ]
+      },
+      {
+        "date": "2020 · 上海",
+        "role": "大数据算法工程师（实习）· 海康威视",
+        "points": [
+          "基于 Python + SUMO/TraCI 搭建可交互信号控制仿真与算法评测环境，完成自适应信控基线评估。"
+        ]
+      },
+      {
+        "date": "2021 — 2026 · 墨尔本 / 斯德哥尔摩",
+        "role": "教学与科研指导 · 蒙纳士大学 & KTH",
+        "points": [
+          "蒙纳士大学深度学习、云计算与安全课程首席助教；KTH AI for Transportation 课程助教——负责课程设计、理论与代码讲解，指导 LLM/RL 交通项目。",
+          "指导 KTH 硕士生完成 LLM 驱动的离散选择模型自动构建研究（相关期刊论文在审）。"
+        ]
+      }
+    ],
+    "kickerEdu": "// 教育经历",
+    "titleEdu": "我的求学之路",
+    "education": [
+      {
+        "school": "瑞典皇家理工学院（KTH）",
+        "degree": "访问博士研究员",
+        "year": "2025 — 2026 · 斯德哥尔摩",
+        "note": "Digital Futures · LLM 编码智能体、出行预测"
+      },
+      {
+        "school": "蒙纳士大学",
+        "degree": "博士 · 人工智能",
+        "year": "2022 — 2026 · 墨尔本",
+        "note": "LLM 智能体、自动算法发现、多智能体强化学习"
+      },
+      {
+        "school": "东南大学",
+        "degree": "",
+        "year": "中国 · 南京",
+        "note": ""
+      },
+      {
+        "school": "山东交通学院",
+        "degree": "",
+        "year": "中国 · 济南",
+        "note": ""
+      }
+    ],
+    "extras": [
+      {
+        "title": "授权发明专利",
+        "text": "3 项中国发明专利（共同发明人），涉及多智能体协作与策略梯度的多模式交通信号控制。"
+      },
+      {
+        "title": "学术服务",
+        "text": "IEEE T-ITS、Transportation Research Part C/E、IEEE ITSC、IEEE IV 审稿人。"
+      },
+      {
+        "title": "语言",
+        "text": "中文（母语），英语（流利）。"
+      }
+    ],
+    "kickerContact": "// 联系方式",
+    "titleContact": "欢迎联系",
+    "contactText": "我于 2026 年 10 月起可入职。如果我的研究方向（大模型智能体、强化学习、智慧出行）与贵团队的需求相符，欢迎随时与我联系。",
+    "email": "leizhen.wang@monash.edu",
+    "footerNote": "感谢访问！",
+    "nav": [
+      [
+        "研究方向",
+        "#interests"
+      ],
+      [
+        "论文成果",
+        "#publications"
+      ],
+      [
+        "职业经历",
+        "#experience"
+      ],
+      [
+        "教育经历",
+        "#education"
+      ],
+      [
+        "联系方式",
+        "#contact"
+      ]
+    ],
+    "badge1": [
+      "蒙纳士大学",
+      "博士 · 人工智能 · 2022–2026"
+    ],
+    "badge2": [
+      "KTH 瑞典皇家理工学院",
+      "访问研究员 · 2025–2026"
+    ],
+    "social": [
+      [
+        "Google Scholar",
+        "https://scholar.google.com/citations?user=MdeVgWkAAAAJ&hl=en"
+      ],
+      [
+        "GitHub",
+        "https://github.com/georgewanglz2019"
+      ],
+      [
+        "LinkedIn",
+        "https://www.linkedin.com/in/leizhen-wang-0766a8250/"
+      ],
+      [
+        "ORCID",
+        "https://orcid.org/0000-0001-6523-3057"
+      ],
+      [
+        "ResearchGate",
+        "https://www.researchgate.net/profile/Leizhen-Wang-2"
+      ],
+      [
+        "邮箱",
+        "mailto:leizhen.wang@monash.edu"
+      ]
+    ],
+    "seekingIntro": "我将于 2026 年 10 月完成博士学位，目前正在寻找新的工作机会。如果您从事大模型智能体、强化学习或智慧出行方向，并认为我的背景可能合适，期待您的联系。",
+    "seekingCta": "联系我",
+    "seekingRoles": [
+      "Agentic LLMs",
+      "强化学习",
+      "研究科学家",
+      "研究工程师"
+    ]
+  }
+}

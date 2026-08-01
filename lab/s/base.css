@@ -62,3 +62,20 @@ button { font: inherit; cursor: pointer; }
 .sw-item.on { color: #7cc7f0; font-weight: 700; }
 .sw-item.on::before { content: "● "; font-size: 8px; vertical-align: 2px; }
 .sw-gallery { border-top: 1px solid rgba(148, 163, 184, 0.25); margin-top: 6px; padding-top: 10px; }
+
+/* ---- entrance sequence for hero blocks (non-terminal styles) ---- */
+@keyframes boot-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+#app:not([data-style="terminal"]) .status     { animation: boot-fade 0.5s ease 0.05s both; }
+#app:not([data-style="terminal"]) .seeking    { animation: boot-fade 0.5s ease 0.30s both; }
+#app:not([data-style="terminal"]) .hero-title { animation: boot-fade 0.5s ease 0.50s both; }
+#app:not([data-style="terminal"]) .hero-sub   { animation: boot-fade 0.5s ease 0.65s both; }
+#app:not([data-style="terminal"]) .hero-bio   { animation: boot-fade 0.5s ease 0.80s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .status, .seeking, .hero-title, .hero-sub, .hero-bio {
+    animation: none !important;
+  }
+}

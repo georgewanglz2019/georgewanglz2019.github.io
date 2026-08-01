@@ -216,19 +216,34 @@
     return s;
   }
 
-  /* ---- terminal typewriter ---- */
+  /* ---- terminal typewriter: sequential, DOM order ---- */
   function typewriter() {
-    var nodes = document.querySelectorAll(".status, .hero-title, .hero-sub");
-    nodes.forEach(function (n, i) {
+    /* [selector, chars-per-tick ms] — hero-title is shown whole (keeps styled spans) */
+    var seq = [
+      [".status", 16, true],
+      [".seeking-text", 11, true],
+      [".hero-title", 0, false],
+      [".hero-sub", 13, true],
+      [".hero-bio", 6, true]
+    ];
+    var i = 0;
+    function next() {
+      if (i >= seq.length) return;
+      var sel = seq[i][0], speed = seq[i][1], type = seq[i][2];
+      i++;
+      var n = document.querySelector(sel);
+      if (!n) { next(); return; }
+      if (!type) { next(); return; } /* shown as-is, move on */
       var full = n.textContent;
       n.textContent = "";
-      n.style.visibility = "visible";
       var k = 0;
-      setTimeout(function tick() {
+      (function tick() {
         n.textContent = full.slice(0, ++k);
-        if (k < full.length) setTimeout(tick, 18);
-      }, 300 + i * 500);
-    });
+        if (k < full.length) setTimeout(tick, speed);
+        else setTimeout(next, 180);
+      })();
+    }
+    setTimeout(next, 250);
   }
 
   /* ================= style switcher ================= */

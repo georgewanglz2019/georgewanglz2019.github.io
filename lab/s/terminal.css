@@ -24,42 +24,6 @@ body::before {
   background: repeating-linear-gradient(0deg, rgba(0,0,0,0.22) 0 1px, transparent 1px 3px);
   z-index: 9998;
 }
-
-/* B. ambient breathing glow (top-right corner) */
-html::before {
-  content: "";
-  position: fixed;
-  top: -18%;
-  right: -12%;
-  width: 58vw;
-  height: 58vw;
-  background: radial-gradient(circle, rgba(74, 222, 128, 0.07), transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-  animation: glow-breathe 7s ease-in-out infinite;
-}
-@keyframes glow-breathe {
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 1; }
-}
-
-/* A. slow scan sweep bar */
-body::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: -140px;
-  height: 140px;
-  background: linear-gradient(180deg, transparent, rgba(74, 222, 128, 0.05) 55%, rgba(74, 222, 128, 0.09) 85%, transparent);
-  pointer-events: none;
-  z-index: 9997;
-  animation: scan-sweep 9s linear infinite;
-}
-@keyframes scan-sweep {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(calc(100vh + 280px)); }
-}
 #app { max-width: 920px; margin: 0 auto; padding: 40px 28px 120px; }
 a { color: var(--cyan); }
 
@@ -179,10 +143,4 @@ a { color: var(--cyan); }
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
   .hero-visual { order: -1; max-width: 260px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html::before, body::after, .status::after, .sec-title::after {
-    animation: none !important;
-  }
 }

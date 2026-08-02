@@ -221,26 +221,28 @@
     /* reduced motion: skip the effect entirely, show everything */
     if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    /* [selector, chars-per-tick ms, type?] — hero-title is shown whole (keeps styled spans) */
+    /* [selector, chars-per-tick ms] — sequential chain */
     var seq = [
-      [".status", 16, true],
-      [".seeking-text", 11, true],
-      [".hero-title", 0, false],
-      [".hero-sub", 13, true],
-      [".hero-bio", 6, true]
+      [".status", 16],
+      [".seeking-text", 11],
+      [".hero-sub", 13],
+      [".hero-bio", 6]
     ];
-    /* hide all sequence targets up-front so nothing flashes before its turn */
+    /* hero-title pops in PARALLEL with the first line, not after it */
+    var titleEl = document.querySelector(".hero-title");
+
+    /* hide all targets up-front so nothing flashes before its turn */
     var targets = seq.map(function (s) { return document.querySelector(s[0]); });
+    if (titleEl) targets.push(titleEl);
     targets.forEach(function (n) { if (n) n.style.visibility = "hidden"; });
 
     var i = 0;
     function next() {
       if (i >= seq.length) return;
-      var n = targets[i], speed = seq[i][1], type = seq[i][2];
+      var n = targets[i], speed = seq[i][1];
       i++;
       if (!n) { next(); return; }
       n.style.visibility = "visible";
-      if (!type) { setTimeout(next, 180); return; } /* shown as-is, move on */
       var full = n.textContent;
       n.textContent = "";
       var k = 0;
@@ -250,7 +252,10 @@
         else setTimeout(next, 180);
       })();
     }
-    setTimeout(next, 250);
+    setTimeout(function () {
+      if (titleEl) titleEl.style.visibility = "visible"; /* parallel with .status */
+      next();
+    }, 250);
   }
 
   /* ================= fixed social rail ================= */

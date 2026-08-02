@@ -216,45 +216,70 @@
     return s;
   }
 
-  /* ---- terminal typewriter: sequential, DOM order ---- */
+  /* ---- terminal typewriter: two parallel chains ----
+     Chain A: .status -> .seeking-text
+     Chain B: .hero-title (prefix typed, styled name spans pop in) -> .hero-sub -> .hero-bio
+     Both chains start at the same moment. */
   function typewriter() {
     /* reduced motion: skip the effect entirely, show everything */
     if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    /* [selector, chars-per-tick ms] — sequential chain */
-    var seq = [
-      [".status", 16],
-      [".seeking-text", 11],
-      [".hero-sub", 13],
-      [".hero-bio", 6]
-    ];
-    /* hero-title pops in PARALLEL with the first line, not after it */
-    var titleEl = document.querySelector(".hero-title");
+    function q(s) { return document.querySelector(s); }
+    function hide(n) { if (n) n.style.visibility = "hidden"; }
+    function show(n) { if (n) n.style.visibility = "visible"; }
 
-    /* hide all targets up-front so nothing flashes before its turn */
-    var targets = seq.map(function (s) { return document.querySelector(s[0]); });
-    if (titleEl) targets.push(titleEl);
-    targets.forEach(function (n) { if (n) n.style.visibility = "hidden"; });
+    var status = q(".status"), seek = q(".seeking-text"),
+        title = q(".hero-title"), sub = q(".hero-sub"), bio = q(".hero-bio");
+    [status, seek, title, sub, bio].forEach(hide);
+    var titleSpans = title ? title.querySelectorAll("span") : [];
+    titleSpans.forEach(hide);
 
-    var i = 0;
-    function next() {
-      if (i >= seq.length) return;
-      var n = targets[i], speed = seq[i][1];
-      i++;
-      if (!n) { next(); return; }
-      n.style.visibility = "visible";
+    function typeText(n, speed, done) {
+      if (!n) { done(); return; }
+      show(n);
       var full = n.textContent;
       n.textContent = "";
       var k = 0;
       (function tick() {
         n.textContent = full.slice(0, ++k);
         if (k < full.length) setTimeout(tick, speed);
-        else setTimeout(next, 180);
+        else setTimeout(done, 180);
       })();
     }
+
+    function typeTitle(done) {
+      if (!title) { done(); return; }
+      show(title);
+      var textNode = title.firstChild;
+      var full = textNode && textNode.nodeType === 3 ? textNode.nodeValue : "";
+      if (!full) { titleSpans.forEach(show); done(); return; }
+      textNode.nodeValue = "";
+      var k = 0;
+      (function tick() {
+        if (k < full.length) {
+          textNode.nodeValue = full.slice(0, ++k);
+          setTimeout(tick, 22);
+        } else {
+          titleSpans.forEach(show); /* styled name pops in whole, keeps colors */
+          setTimeout(done, 180);
+        }
+      })();
+    }
+
+    /* chain A: status -> seeking */
     setTimeout(function () {
-      if (titleEl) titleEl.style.visibility = "visible"; /* parallel with .status */
-      next();
+      typeText(status, 16, function () {
+        typeText(seek, 11, function () {});
+      });
+    }, 250);
+
+    /* chain B: title -> sub -> bio (same start time as chain A) */
+    setTimeout(function () {
+      typeTitle(function () {
+        typeText(sub, 13, function () {
+          typeText(bio, 6, function () {});
+        });
+      });
     }, 250);
   }
 

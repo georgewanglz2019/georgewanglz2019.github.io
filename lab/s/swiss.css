@@ -145,3 +145,8 @@ a { color: var(--red); }
 .seeking .seeking-cta { display: inline-block; margin: 0 16px 12px 0; }
 .seeking-roles { display: flex; flex-wrap: wrap; gap: 8px; }
 .seeking-roles span { border: 2px solid var(--ink); padding: 4px 11px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* social links as prominent chips */
+.soc { border: 2px solid var(--ink); padding: 7px 14px; color: var(--ink); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.soc:hover { background: var(--ink); color: #fff; }
+.soc::after { content: ""; margin-left: 0; }

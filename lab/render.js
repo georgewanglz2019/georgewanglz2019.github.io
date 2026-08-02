@@ -253,6 +253,23 @@
     setTimeout(next, 250);
   }
 
+  /* ================= fixed social rail ================= */
+  function buildRail() {
+    var old = document.querySelector(".social-rail");
+    if (old) old.remove();
+    var rail = el("aside", "social-rail");
+    var map = {
+      "Google Scholar": "GS", "GitHub": "GH", "LinkedIn": "in",
+      "ORCID": "iD", "ResearchGate": "RG", "Email": "@", "邮箱": "@"
+    };
+    t().social.forEach(function (s) {
+      var a = link("", map[s[0]] || s[0].slice(0, 2), s[1], true);
+      a.title = s[0];
+      rail.appendChild(a);
+    });
+    document.body.appendChild(rail);
+  }
+
   /* ================= style switcher ================= */
   function buildSwitcher() {
     var sw = el("aside", "switcher");

@@ -131,3 +131,7 @@ a { color: var(--accent); text-decoration: none; }
 .seeking .seeking-cta { display: inline-block; margin: 0 16px 12px 0; }
 .seeking-roles { display: flex; flex-wrap: wrap; gap: 8px; }
 .seeking-roles span { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(22,19,15,0.07); padding: 4px 11px; }
+
+/* social links as prominent chips */
+.soc { border: 1px solid var(--ink); padding: 8px 16px; color: var(--ink); }
+.soc:hover { background: var(--ink); color: var(--paper); }

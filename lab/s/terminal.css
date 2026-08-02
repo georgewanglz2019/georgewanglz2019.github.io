@@ -144,3 +144,6 @@ a { color: var(--cyan); }
   .hero { grid-template-columns: 1fr; }
   .hero-visual { order: -1; max-width: 260px; }
 }
+
+/* social links as prominent chips */
+.soc { border: 1px solid var(--faint); padding: 5px 13px; }

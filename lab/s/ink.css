@@ -171,3 +171,7 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .seeking .seeking-cta { display: inline-block; margin: 0 16px 12px 0; }
 .seeking-roles { display: flex; flex-wrap: wrap; gap: 8px; }
 .seeking-roles span { border: 1px solid var(--line); color: var(--ink-soft); padding: 2px 11px; font-size: 0.75rem; letter-spacing: 0.08em; }
+
+/* social links as prominent chips */
+.soc { border: 1px solid var(--ink-soft); padding: 5px 14px; color: var(--ink); }
+.soc:hover { border-color: var(--cinnabar); color: var(--cinnabar); }

@@ -1,12 +1,15 @@
 /* ============ 5. Academic Rigour (LaTeX-like) ============ */
 :root {
-  --ink: #1a1a1a;
-  --muted: #555;
-  --rule: #1a1a1a;
+  --paper: #fcfbf7;
+  --ink: #1c1c1c;
+  --muted: #5b5b5b;
+  --line: #e2dcd0;
+  --rule: #1c1c1c;
   --accent: #7a0019;
+  --accent-soft: rgba(122, 0, 25, 0.05);
 }
 body {
-  background: #fdfdfa;
+  background: var(--paper);
   color: var(--ink);
   font-family: "Latin Modern Roman", "Computer Modern", Georgia, "Times New Roman", "Songti SC", SimSun, serif;
   line-height: 1.75;
@@ -53,7 +56,7 @@ a:hover { text-decoration: underline; }
   font-size: 1.3rem; font-variant: small-caps; letter-spacing: 0.05em;
   margin: 0 0 20px; counter-increment: section;
 }
-.sec-title::before { content: counter(section) ". "; }
+.sec-title::before { content: counter(section) ". "; color: var(--accent); }
 .sec-title::after { content: ""; display: block; width: 100%; border-bottom: 1px solid var(--rule); margin-top: 6px; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 14px; }
@@ -63,10 +66,11 @@ a:hover { text-decoration: underline; }
 .skill + .skill::before { content: " · "; }
 
 .cards { display: grid; gap: 0; }
-.card { padding: 16px 0; border-bottom: 1px solid #ddd; }
+.card { padding: 16px 0; border-bottom: 1px solid var(--line); transition: background 0.2s ease; }
+.card:hover { background: var(--accent-soft); }
 .card .venue { display: none; }
 .card-title { font-size: 1.02rem; margin: 0 0 4px; font-weight: 700; line-height: 1.5; }
-.card-title::before { content: "[" counter(paper) "] "; font-weight: 400; }
+.card-title::before { content: "[" counter(paper) "] "; font-weight: 400; color: var(--accent); }
 .card { counter-increment: paper; }
 .cards { counter-reset: paper; }
 .authors { font-size: 0.9rem; margin: 2px 0; }
@@ -107,7 +111,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* job-seeking lead-in */
-.seeking { border-left: 2px solid var(--accent); padding: 2px 0 2px 18px; margin: 0 0 24px; max-width: 620px; }
+.seeking { border-left: 2px solid var(--accent); background: var(--accent-soft); padding: 14px 18px; margin: 0 0 24px; max-width: 620px; }
 .seeking-text { margin: 0 0 12px; }
 .seeking .seeking-cta { display: inline-block; margin: 0 14px 10px 0; }
 .seeking-roles { display: flex; flex-wrap: wrap; gap: 8px 14px; }

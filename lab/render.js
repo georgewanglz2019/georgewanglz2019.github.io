@@ -69,17 +69,19 @@
     var hero = el("section", "hero");
     hero.id = "top";
     var heroText = el("div", "hero-text");
-    heroText.appendChild(el("p", "status", c.status));
+    if (c.status) heroText.appendChild(el("p", "status", c.status));
 
-    /* job-seeking lead-in: right under the status badge */
-    var seek = el("div", "seeking");
-    seek.appendChild(el("p", "seeking-text", c.seekingIntro));
-    var seekCta = link("btn primary seeking-cta", c.seekingCta + " ↓", "#contact");
-    seek.appendChild(seekCta);
-    var roles = el("div", "seeking-roles");
-    (c.seekingRoles || []).forEach(function (r) { roles.appendChild(el("span", "", r)); });
-    seek.appendChild(roles);
-    heroText.appendChild(seek);
+    /* job-seeking lead-in: right under the status badge (rendered only when set) */
+    if (c.seekingIntro) {
+      var seek = el("div", "seeking");
+      seek.appendChild(el("p", "seeking-text", c.seekingIntro));
+      var seekCta = link("btn primary seeking-cta", c.seekingCta + " ↓", "#contact");
+      seek.appendChild(seekCta);
+      var roles = el("div", "seeking-roles");
+      (c.seekingRoles || []).forEach(function (r) { roles.appendChild(el("span", "", r)); });
+      seek.appendChild(roles);
+      heroText.appendChild(seek);
+    }
 
     var h1 = el("h1", "hero-title");
     h1.appendChild(document.createTextNode(c.heroTitleA + " "));
@@ -197,8 +199,30 @@
 
     app.appendChild(el("footer", "ft", c.footerNote));
 
+    if (STYLE === "academic") academicLayout(app);
     if (STYLE === "terminal") typewriter();
     document.title = c.siteName + (LANG === "zh" ? " — 主页" : " — Home");
+  }
+
+  /* academic style: move portrait plate + social links into a sticky left
+     sidebar; header stays full-width, everything else scrolls on the right */
+  function academicLayout(app) {
+    var hero = app.querySelector(".hero");
+    if (!hero) return;
+    var vis = hero.querySelector(".hero-visual");
+    var soc = hero.querySelector(".social");
+    var side = el("aside", "side");
+    if (vis) side.appendChild(vis);
+    if (soc) side.appendChild(soc);
+    var layout = el("div", "layout");
+    var main = el("div", "main-col");
+    Array.prototype.slice.call(app.children).forEach(function (n) {
+      if (n.classList && n.classList.contains("hd")) return;
+      main.appendChild(n);
+    });
+    layout.appendChild(side);
+    layout.appendChild(main);
+    app.appendChild(layout);
   }
 
   function badge(pair) {

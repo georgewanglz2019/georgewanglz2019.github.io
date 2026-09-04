@@ -68,7 +68,7 @@ git push -u origin main          # 若本地分支叫 master 就推 master
 | 位置 | 改什么 |
 |---|---|
 | **`lab/content.json`** | 全部文字内容：姓名、简介、求职意向、论文、经历、教育、社交链接（`en` 英文 / `zh` 中文两个节点） |
-| **`images/`** | 换成你的照片，并修改 `lab/render.js` 中 `img.src = "/images/Leizhen_Spain.jpg"` 一行的文件名 |
+| **`images/`** | 换成你的照片，并修改 `lab/render.js` 中 `img.src` 一行的文件名 |
 | **`index.html`** | `<title>` 和 `<meta name="description">` 改成你的信息 |
 
 改完推送，1–2 分钟后线上生效：
@@ -148,7 +148,7 @@ git push -u origin main          # or "master" if that is your local branch
 | Where | What |
 |---|---|
 | **`lab/content.json`** | All text: name, bio, job-seeking info, publications, experience, education, social links (`en` / `zh` nodes) |
-| **`images/`** | Replace with your photo, then update `img.src = "/images/Leizhen_Spain.jpg"` in `lab/render.js` |
+| **`images/`** | Replace with your photo, then update the `img.src` line in `lab/render.js` |
 | **`index.html`** | Update `<title>` and `<meta name="description">` |
 
 Then `git add -A && git commit && git push` — live in 1–2 minutes.

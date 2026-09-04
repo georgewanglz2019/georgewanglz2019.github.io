@@ -1,7 +1,7 @@
 {
   "en": {
     "siteName": "Leizhen Wang",
-    "status": "Open to Opportunities · 2026",
+    "status": "",
     "heroTitleA": "Hi, I'm",
     "heroName": "Leizhen Wang",
     "heroNameCn": "(王雷震)",
@@ -250,7 +250,7 @@
     ],
     "kickerContact": "// Contact",
     "titleContact": "Let's connect",
-    "contactText": "I am open to research positions starting from October 2026. If my work on LLM agents, reinforcement learning, or intelligent mobility looks like a good match for your team, please feel free to reach out.",
+    "contactText": "If my work on LLM agents, reinforcement learning, or intelligent mobility looks like a good match for your team, please feel free to reach out.",
     "email": "leizhen.wang@monash.edu",
     "footerNote": "Thank you for visiting!",
     "nav": [
@@ -309,18 +309,13 @@
         "mailto:leizhen.wang@monash.edu"
       ]
     ],
-    "seekingIntro": "I'm completing my PhD in October 2026 and currently open to new opportunities. If you work on LLM agents, reinforcement learning, or intelligent mobility and feel my background could be a good fit, I'd be glad to hear from you.",
-    "seekingCta": "Get in Touch",
-    "seekingRoles": [
-      "Agentic LLMs",
-      "Reinforcement Learning",
-      "Research Scientist",
-      "Research Engineer"
-    ]
+    "seekingIntro": "",
+    "seekingCta": "",
+    "seekingRoles": []
   },
   "zh": {
     "siteName": "王雷震",
-    "status": "正在寻找工作机会 · 2026",
+    "status": "",
     "heroTitleA": "你好，我是",
     "heroName": "王雷震",
     "heroNameCn": "(Leizhen Wang)",
@@ -569,7 +564,7 @@
     ],
     "kickerContact": "// 联系方式",
     "titleContact": "欢迎联系",
-    "contactText": "我于 2026 年 10 月起可入职。如果我的研究方向（大模型智能体、强化学习、智慧出行）与贵团队的需求相符，欢迎随时与我联系。",
+    "contactText": "如果我的研究方向（大模型智能体、强化学习、智慧出行）与贵团队的需求相符，欢迎随时与我联系。",
     "email": "leizhen.wang@monash.edu",
     "footerNote": "感谢访问！",
     "nav": [
@@ -628,13 +623,8 @@
         "mailto:leizhen.wang@monash.edu"
       ]
     ],
-    "seekingIntro": "我将于 2026 年 10 月完成博士学位，目前正在寻找新的工作机会。如果您从事大模型智能体、强化学习或智慧出行方向，并认为我的背景可能合适，期待您的联系。",
-    "seekingCta": "联系我",
-    "seekingRoles": [
-      "Agentic LLMs",
-      "强化学习",
-      "研究科学家",
-      "研究工程师"
-    ]
+    "seekingIntro": "",
+    "seekingCta": "",
+    "seekingRoles": []
   }
 }

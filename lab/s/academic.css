@@ -69,7 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .hero-title .accent { color: var(--ink); }
 .hero-cn { display: block; font-size: 0.5em; color: var(--muted); font-weight: 400; margin-top: 8px; letter-spacing: 0.04em; }
 .hero-sub { font-style: italic; color: var(--muted); font-size: 1.02rem; line-height: 1.55; margin: 0 0 16px; }
-.hero-bio { margin: 0 0 20px; text-align: justify; hyphens: auto; font-size: 0.97rem; }
+.hero-bio { margin: 0 0 20px; text-align: start; font-size: 0.97rem; }
 .hero-bio::first-letter { font-weight: 700; }
 .cta { display: flex; flex-wrap: wrap; gap: 14px; }
 .btn { border: 1px solid var(--ink); padding: 7px 22px; font-family: inherit; font-size: 0.88rem; font-variant: small-caps; letter-spacing: 0.06em; color: var(--ink); background: transparent; }
@@ -102,18 +102,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 /* publications: numbered reference list */
 .cards { display: grid; gap: 0; counter-reset: paper; }
-.card { padding: 18px 6px; border-bottom: 1px solid var(--line); transition: background 0.2s ease; counter-increment: paper; }
+.card { position: relative; padding: 22px 10px 22px 36px; border-bottom: 1px solid var(--line); transition: background 0.2s ease; counter-increment: paper; }
 .card:hover { background: var(--accent-soft); }
 .card .venue { display: block; font-size: 0.78rem; font-variant: small-caps; letter-spacing: 0.09em; color: var(--accent); margin-bottom: 3px; }
 .card.review .venue { font-style: italic; }
-.card-title { font-size: 1.04rem; margin: 0 0 4px; font-weight: 700; line-height: 1.55; }
-.card-title::before { content: "[" counter(paper) "] "; font-weight: 400; color: var(--accent); }
+.card-title { font-size: 1.08rem; margin: 0 0 6px; font-weight: 700; line-height: 1.5; text-wrap: pretty; }
+.card-title::before { content: "[" counter(paper) "]"; position: absolute; left: 4px; font-size: 0.88rem; font-weight: 400; color: var(--accent); line-height: 1.84; }
 .authors { font-size: 0.9rem; margin: 2px 0; color: var(--ink); }
 .journal { font-style: italic; font-size: 0.9rem; color: var(--muted); margin: 2px 0; }
 .note { font-size: 0.88rem; color: var(--muted); margin: 6px 0 2px; }
 .ctags { display: none; }
-.card-links { font-size: 0.85rem; margin-top: 4px; }
-.card-links a + a::before { content: " | "; color: var(--muted); }
+.card-links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.85rem; margin-top: 10px; }
+.card-links a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .more { font-size: 0.9rem; font-style: italic; margin-top: 16px; }
 
 /* experience timeline */
@@ -179,7 +179,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   #app { padding: 40px 22px 80px; }
   .layout { flex-direction: column; gap: 36px; }
   .side { position: static; flex: none; width: 100%; }
-  .main-col { border-left: 0; padding-left: 0; }
+  .main-col { width: 100%; border-left: 0; padding-left: 0; }
   .side .hero-visual { max-width: 230px; margin: 0 auto; }
   .side .social { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .side .soc { display: inline-block; border: 1px solid var(--chip); border-bottom: 1px solid var(--chip); background: var(--card); padding: 3px 13px; }
@@ -190,7 +190,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .mini-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
+  #app { padding: 28px 18px 80px; }
+  .hd { margin-bottom: 28px; }
+  .sec { margin-top: 36px; }
+  .card { padding-right: 0; padding-left: 30px; }
+  .card-title::before { left: 0; }
   .tl-item, .edu-card { grid-template-columns: 1fr; }
+  .tl-item h3, .tl-item ul { grid-column: 1; }
   .edu-card .year { grid-column: 1; grid-row: auto; }
   .tl-date { text-align: left; padding-top: 0; }
 }

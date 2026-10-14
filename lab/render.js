@@ -43,6 +43,7 @@
   /* ================= DOM build ================= */
   function render() {
     var c = t();
+    document.documentElement.lang = LANG === "zh" ? "zh-CN" : "en";
     var app = document.getElementById("app");
     app.innerHTML = "";
     app.setAttribute("data-style", STYLE);
@@ -131,7 +132,12 @@
       var card = el("article", "card" + (p.review ? " review" : ""));
       card.appendChild(el("span", "venue", p.venue));
       card.appendChild(el("h3", "card-title", p.title));
-      card.appendChild(el("p", "authors", p.authors));
+      var authors = el("p", "authors");
+      p.authors.split(", ").forEach(function (author, i) {
+        if (i) authors.appendChild(document.createTextNode(", "));
+        authors.appendChild(el(author === "L Wang" ? "strong" : "span", "", author));
+      });
+      card.appendChild(authors);
       if (p.journal) card.appendChild(el("p", "journal", p.journal));
       if (p.note) card.appendChild(el("p", "note", p.note));
       var ct = el("div", "ctags");

@@ -6,7 +6,7 @@
     "heroName": "Leizhen Wang",
     "heroNameCn": "(王雷震)",
     "heroSub": "LLM Agents · Reinforcement Learning · Automated Algorithm Discovery for smarter urban mobility",
-    "heroBio": "Final-year PhD candidate in AI at Monash University (expected October 2026) and visiting researcher at KTH Royal Institute of Technology (Digital Futures). My research explores how LLM agents and reinforcement learning can automate the discovery and optimization of decision-making algorithms for transportation systems — with first-author work in TR-C, COMMTR and IEEE OJ-ITS, released as the open-source projects LLMTraveler, MARL4TA and EvolveSignal.",
+    "heroBio": "Final-year PhD candidate in AI at Monash University (expected October 2026) and visiting researcher at KTH Royal Institute of Technology (Digital Futures). My research explores how LLM agents and reinforcement learning can automate the discovery and optimization of decision-making algorithms for transportation systems, with first-author work in TR-C, COMMTR and IEEE OJ-ITS. My projects include LLMTraveler, MARL4TA and EvolveSignal; my latest preprint, EvoSignal, explores modular traffic signal control programs evolved by LLMs.",
     "ctaPubs": "View Publications",
     "ctaContact": "Get in Touch",
     "stats": [],
@@ -46,9 +46,27 @@
     "pubsMore": "For a full and up-to-date list of publications, visit my Google Scholar profile",
     "pubs": [
       {
+        "venue": "arXiv Preprint · 2026",
+        "review": true,
+        "title": "EvoSignal: LLM-Guided Evolutionary Design of Modular Traffic Signal Control Programs",
+        "authors": "L Wang, P Duan, Z Qin, Y Ling, J Xu, Y Wang, H Wang, Z Ma",
+        "journal": "arXiv:2610.09563",
+        "note": "LLM-guided evolution of inspectable, modular control programs that run without online LLM inference. Across five scenarios on two real-world road networks, the default program reduces waiting time by 16.8–49.2% relative to the best waiting-time result among 20 baselines in each scenario.",
+        "tags": [
+          "LLM-Guided Evolution",
+          "Modular Programs",
+          "Signal Control"
+        ],
+        "links": [
+          ["Paper", "https://arxiv.org/abs/2610.09563"],
+          ["PDF", "https://arxiv.org/pdf/2610.09563"],
+          ["Project", "https://github.com/georgewanglz2019/EvoSignal"]
+        ]
+      },
+      {
         "venue": "Under Review · 2026",
         "review": true,
-        "title": "EvolveSignal: A Large Language Model Powered Coding Agent for Discovering Traffic Signal Control Algorithms",
+        "title": "EvolveSignal: A Large Language Model Powered Coding Agent for Discovering Traffic Signal Control Strategies",
         "authors": "L Wang, P Duan, H Wang, Y Wang, J Xu, N Zheng, Z Ma",
         "journal": "",
         "note": "LLM-driven program synthesis that evolves interpretable signal-control heuristics — 20.1% lower average delay and 47.1% fewer stops than Webster's method.",
@@ -320,7 +338,7 @@
     "heroName": "王雷震",
     "heroNameCn": "(Leizhen Wang)",
     "heroSub": "大模型智能体 · 强化学习 · 自动算法发现，面向更智慧的城市出行",
-    "heroBio": "蒙纳士大学（Monash University）人工智能方向博士候选人（预计 2026 年 10 月毕业），瑞典皇家理工学院（KTH）Digital Futures 访问研究员。我的研究探索如何利用大语言模型智能体与强化学习，自动发现与优化交通系统的决策算法——第一作者成果发表于 TR-C、COMMTR、IEEE OJ-ITS 等期刊，并以 LLMTraveler、MARL4TA、EvolveSignal 三个开源项目发布。",
+    "heroBio": "蒙纳士大学（Monash University）人工智能方向博士候选人（预计 2026 年 10 月毕业），瑞典皇家理工学院（KTH）Digital Futures 访问研究员。我的研究探索如何利用大语言模型智能体与强化学习，自动发现与优化交通系统的决策算法，第一作者成果发表于 TR-C、COMMTR、IEEE OJ-ITS 等期刊。研究项目包括 LLMTraveler、MARL4TA 和 EvolveSignal；最新预印本 EvoSignal 探索由大模型进化设计的模块化交通信号控制程序。",
     "ctaPubs": "查看论文成果",
     "ctaContact": "联系我",
     "stats": [],
@@ -360,9 +378,27 @@
     "pubsMore": "完整论文列表请访问我的 Google Scholar 主页",
     "pubs": [
       {
+        "venue": "arXiv 预印本 · 2026",
+        "review": true,
+        "title": "EvoSignal：大语言模型引导的模块化交通信号控制程序进化设计",
+        "authors": "L Wang, P Duan, Z Qin, Y Ling, J Xu, Y Wang, H Wang, Z Ma",
+        "journal": "arXiv:2610.09563",
+        "note": "通过大模型引导的进化搜索，生成可检查的模块化控制程序，运行时无需在线大模型推理。在两个真实路网的五个场景中，默认程序相较各场景 20 种基线中的最优等待时间结果，将等待时间降低 16.8–49.2%。",
+        "tags": [
+          "LLM 引导的进化搜索",
+          "模块化程序",
+          "信号控制"
+        ],
+        "links": [
+          ["论文", "https://arxiv.org/abs/2610.09563"],
+          ["PDF", "https://arxiv.org/pdf/2610.09563"],
+          ["项目主页", "https://github.com/georgewanglz2019/EvoSignal"]
+        ]
+      },
+      {
         "venue": "在审 · 2026",
         "review": true,
-        "title": "EvolveSignal：大语言模型驱动的编码智能体，自动发现交通信号控制算法",
+        "title": "EvolveSignal：大语言模型驱动的编码智能体，自动发现交通信号控制策略",
         "authors": "L Wang, P Duan, H Wang, Y Wang, J Xu, N Zheng, Z Ma",
         "journal": "",
         "note": "LLM 驱动的程序合成框架，自动进化出可解释的信号控制启发式策略——相较经典 Webster 方法，平均延误降低 20.1%、平均停车次数减少 47.1%。",
